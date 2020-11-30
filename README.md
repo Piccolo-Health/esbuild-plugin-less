@@ -25,3 +25,7 @@ esbuild
   })
   .catch(() => process.exit(1));
 ```
+
+## Contributors
+
+All welcome
