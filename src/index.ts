@@ -18,14 +18,12 @@ export default (options: LessPluginOptions): Plugin => ({
   name: 'less',
   setup(build: PluginBuild) {
     build.onLoad(buildOptions, async (args: OnLoadArgs) => {
-      const filename = args.path;
-
       const lessOptions = Object.assign(defaultOptions, options, {
         filename: args.path,
       });
 
       try {
-        const data = await fs.promises.readFile(filename, 'utf8');
+        const data = await fs.promises.readFile(args.path, 'utf8');
         const result = await less.render(data, lessOptions);
         return { contents: result.css, loader: 'css' };
       } catch (error) {
