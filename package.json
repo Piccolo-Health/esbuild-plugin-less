@@ -1,6 +1,6 @@
 {
   "name": "esbuild-plugin-less",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A boilerplate repo for publishing typescript packages to npm",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
